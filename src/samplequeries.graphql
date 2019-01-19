@@ -1,0 +1,36 @@
+query {
+  users {
+    id
+    name
+    email
+    age
+  }
+}
+
+
+// Why won't the below query work?
+query {
+  user(id: 1) {
+    id
+    name
+    email
+    age
+  }
+}
+
+
+mutation {
+  createUser(id: 3, name: "Robert", email: "robert@gmail.com", age: 21) {
+    id
+    name
+    email
+    age
+  }
+}
+
+
+mutation {
+  deleteUser(id: 3) {
+    id
+  }
+}
